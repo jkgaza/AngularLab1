@@ -1,0 +1,24 @@
+.completed{
+    text-decoration: line-through;
+    color: slategray;
+}
+
+.not-completed{
+    color:  rgb(211, 69, 116);
+}
+
+.close{
+    color:  rgb(211, 69, 116);
+    font-weight: bold;
+    border-radius: 5px;
+    position: relative;
+    float: right;
+    
+}
+
+#donebtn{
+    color:  rgb(211, 69, 116);
+    border-color:  rgb(211, 69, 116);
+    margin-right: 5px;
+    font-family: 'Abel', sans-serif;
+}

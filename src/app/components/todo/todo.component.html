@@ -1,0 +1,10 @@
+<button id ="donebtn" *ngIf="!completed">Complete</button>
+<span
+[ngClass] = "{
+        'completed': this.completed,
+        'not-completed': !this.completed
+    }">{{task}}
+    <button class="close" *ngIf = "completed">X</button>
+    </span>
+
+
