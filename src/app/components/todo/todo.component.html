@@ -1,10 +1,10 @@
-<button id ="donebtn" *ngIf="!completed">Complete</button>
+<button id ="donebtn" *ngIf="!completed" (click)="completeTask()">Complete</button>
 <span
 [ngClass] = "{
         'completed': this.completed,
         'not-completed': !this.completed
     }">{{task}}
-    <button class="close" *ngIf = "completed">X</button>
+    <button class="close" (click)="removeTask()">X</button>
     </span>
 
 

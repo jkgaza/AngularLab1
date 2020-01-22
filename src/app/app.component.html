@@ -5,7 +5,9 @@
 <div id="wrapper">
   <div *ngFor="let todo of tasks; let i = index">
     {{ i + 1 }}
-    <app-todo [completed]="todo.completed" [task]="todo.task"></app-todo>
+    <app-todo (delete) = "onDeleted(i)" [completed]="todo.completed" [task]="todo.task"></app-todo>
   </div>
-  <input class="textspace" placeholder="Today I need to..." />
+  <input [(ngModel)] = "newTask" class="textspace" placeholder="Today I need to..." />
+  <button class= "button" (click)="addTask(newTask)">Add</button>
+
 </div>

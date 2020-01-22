@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from "@angular/core";
 
+
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
@@ -8,6 +9,10 @@ import { Component, OnInit, Input } from "@angular/core";
 export class ToDoComponent implements OnInit {
   @Input() completed: boolean;
   @Input() task: string;
+  // @Input() completeTask: boolean;
+  // @Input() removeTask: boolean;
+
+
 
   tasks = [
     { task: "Pet cat", completed: true },
@@ -16,7 +21,21 @@ export class ToDoComponent implements OnInit {
     { task: "Sweep kitchen", completed: true }
   ];
 
-  constructor() {}
+ 
+
+  constructor() {
+  
+  }
 
   ngOnInit() {}
+
+  addTask(task: string){
+    this.tasks.push({task: task, completed: false});
+  }
+
+
+
+  onDeleted(index: number){
+    this.tasks.splice(index, 1);
+  }
 }
