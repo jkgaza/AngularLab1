@@ -1,7 +1,7 @@
 <h1>To Do List</h1>
 <h3>A list of things that need to be completed</h3>
 
-<input class="textspace" placeholder="Filter your To Dos" />
+<input class="textspace" placeholder="Filter your To Dos" *ngFor = "lettodo of (todos | searchFilter)"/>
 <div id="wrapper">
   <div *ngFor="let todo of tasks; let i = index">
     {{ i + 1 }}

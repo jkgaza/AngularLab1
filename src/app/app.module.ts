@@ -5,11 +5,13 @@ import { FormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { ToDoComponent } from './app.component';
 import { TodoComponent } from './components/todo/todo.component';
+import { SearchPipe } from './search.pipe';
 
 @NgModule({
   declarations: [
     ToDoComponent,
-    TodoComponent
+    TodoComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,

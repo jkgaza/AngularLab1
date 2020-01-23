@@ -3,7 +3,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 
 
-interface ITodo{
+export interface ITodo{
   completed: boolean;
   task:string;
 }
